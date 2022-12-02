@@ -1,22 +1,15 @@
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.util.Arrays;
 import java.util.Random;
 
+// data and traditional approach for calculations(to compare) without multithreading
+
 public class RandomData {
     private final static Logger log = LoggerFactory.getLogger(RandomData.class);
-    public static void main(String[] args) {
-        var matrixMC = matrix(400, 300);
-        var matrixME = matrix(300, 400);
-        var matrixMZ = matrix(300, 400);
-        var matrixMT = matrix(400, 300);
-        var minD = findTheSmallestNumInVector(vectorD);
-        //vector.length must be equal to matrix.length (row)
-        //vectors should be equal
-        var vectorB = vector(400);
-        var vectorD = vector(400);
 
+    public static void main(String[] args) {
+        var minD = findTheSmallestNumInVector(vectorD);
         //VECTOR A CALCULATIONS
         long timeForVectorA = System.currentTimeMillis();
         //vectors should be equal
@@ -24,19 +17,21 @@ public class RandomData {
         var BMC = product(vectorB, matrixMC);
         var DMT = product(vectorD, matrixMT);
         var A = sum(BMC, DMT);
-        if(A.length >= 30){
+        if (A.length >= 30) {
             log.info("VECTOR A length: " + A.length);
-        }else{
+        } else {
             log.info("VECTOR A: " + Arrays.toString(A));
         }
         log.info("TIME FOR VECTOR A: " + Long.toString(System.currentTimeMillis() - timeForVectorA));
         log.info("---------------------------------------");
 
-        //множення мариць можливе лише тоді коли число стовпців першої матриці = кількості рядків другої
         //MATRIX MA CALCULATIONS
         long timeForMatrixMA = System.currentTimeMillis();
-        var matrixProdMZMT = productMatrix(matrixMZ, matrixMT);
-        var matrixProdMCME = productMatrix(matrixMC, matrixME);
+        var matrixProdMZMT = productMatrices(matrixMZ, matrixMT);
+        log.info("Matrix MZ: \n", matrixToString(matrixMZ));
+        log.info("Matrix MT: \n", matrixToString(matrixMT));
+        log.info(matrixToString(matrixProdMZMT));
+        var matrixProdMCME = productMatrices(matrixMC, matrixME);
         var prodMatrixAndNum = productMatrixAndNumber(matrixProdMCME, minD);
         //MA
         var matrixMA = sumOfMatrices(prodMatrixAndNum, matrixProdMZMT);
@@ -47,17 +42,31 @@ public class RandomData {
         }
         log.info("TIME FOR MATRIX MA: " + Long.toString(System.currentTimeMillis() - timeForMatrixMA));
         log.info("---------------------------------------");
-   }
-
-    static double[][] matrixMC = matrix(400, 300);
-    static double[][] matrixME = matrix(300, 400);
-    static double[][] matrixMZ = matrix(300, 400);
-    static double[][] matrixMT = matrix(400, 300);
-
+    }
     //vector.length must be equal to matrix.length (row)
     //vectors should be equal
-    static double[] vectorB = vector(400);
-    static double[] vectorD = vector(400);
+
+    //множення мариць можливе лише
+    //тоді коли число стовпців першої матриці = кількості рядків другої
+
+    //static double[][] matrixMC = matrix(4, 3);
+    //static double[][] matrixME = matrix(3, 4);
+
+    //static double[][] matrixMT = matrix(3, 4);
+    //static double[][] matrixMZ = matrix(4, 3);
+
+    static double[][] matrixMC = {{1, 8, 11, 8}, {9, 11, 2, 9}, {1, 5, 7, 8}, {2, 9, 1, 8}};
+    static double[][] matrixME = {{1, 0, 1, 6}, {4, 2, 1, 8}, {1, 8, 5, 8}, {8, 9, 1, 6}};
+
+    static double[][] matrixMZ = {{1, 8, 9, 8}, {9, 11, 0, 8}, {3, 5, 7, 5}, {8, 5, 1, 8}};
+    static double[][] matrixMT = {{1, 2, 3, 9}, {4, 9, 12, 5}, {1, 3, 5, 8}, {8, 3, 1, 8}};
+
+
+//    static double[] vectorB = vector(3);
+//    static double[] vectorD = vector(3);
+
+    static double[] vectorB = {1,2,3,8};
+    static double[] vectorD = {1,2,3,2}; // виходить трьохзначний вектор
 
     //generate random matrix
     public static double[][] matrix(int row, int col) {
@@ -93,7 +102,7 @@ public class RandomData {
         return out.toString();
     }
 
-    //for operations with vector and matrix
+    //for multiplying vector and matrix
     public static double[] product(double[] vector, double[][] matrix) {
         var result = new double[matrix[0].length];
         for (int i = 0; i < matrix[0].length; i++) {
@@ -106,8 +115,8 @@ public class RandomData {
         return result;
     }
 
-    public static double[][] productMatrix(double[][] matrix1, double[][] matrix2) {
-        if (matrix1.length <= matrix2.length) {
+    // for multiplying 2 matrices
+    public static double[][] productMatrices(double[][] matrix1, double[][] matrix2) {
             var result = new double[matrix1.length][matrix1.length];
             for (int i = 0; i < matrix1.length; i++) {
                 for (int j = 0; j < matrix1.length; j++) {
@@ -117,17 +126,6 @@ public class RandomData {
                 }
             }
             return result;
-        } else {
-            var result = new double[matrix2.length][matrix2.length];
-            for (int i = 0; i < matrix2.length; i++) {
-                for (int j = 0; j < matrix2.length; j++) {
-                    for (int k = 0; k < matrix1.length; k++) {
-                        result[i][j] += matrix2[i][k] * matrix1[k][j];
-                    }
-                }
-            }
-            return result;
-        }
     }
 
     public static double[][] productMatrixAndNumber(double[][] matrix, double number) {
