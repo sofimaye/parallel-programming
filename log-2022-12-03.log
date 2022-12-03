@@ -1,0 +1,153 @@
+12:59:18.665 [main] DEBUG operation.MatricesMultiplier - Multiplying matrixes: 5x10 and 10x7
+12:59:18.668 [main] DEBUG operation.MatricesMultiplier - Multiplying matrixes: 5x10 and 10x7
+12:59:18.668 [main] DEBUG operation.MatricesMultiplier - Multiplying matrixes: 5x10 and 10x7
+12:59:18.669 [main] DEBUG operation.MatricesMultiplier - Multiplying matrixes: 5x10 and 10x7
+12:59:18.670 [main] DEBUG operation.MatricesMultiplier - Multiplying matrixes: 5x10 and 10x7
+12:59:18.672 [Thread-1] DEBUG operation.MatricesMultiplier - Multiplying row: 1
+12:59:18.672 [Thread-0] DEBUG operation.MatricesMultiplier - Multiplying row: 0
+12:59:18.672 [Thread-2] DEBUG operation.MatricesMultiplier - Multiplying row: 2
+12:59:18.675 [Thread-3] DEBUG operation.MatricesMultiplier - Multiplying row: 3
+12:59:18.678 [Thread-4] DEBUG operation.MatricesMultiplier - Multiplying row: 4
+12:59:18.680 [main] INFO  LabThreads - matrix MZ:
+1.0 2.0 3.0 4.0 5.0 8.0 9.0 9.0 9.0 0.0 
+1.0 2.0 6.0 4.0 5.0 8.0 6.0 6.0 7.0 8.0 
+9.0 2.0 3.0 4.0 5.0 6.0 5.0 6.0 6.0 6.0 
+1.0 3.0 3.0 4.0 5.0 6.0 7.0 4.0 4.0 4.0 
+1.0 4.0 3.0 9.0 5.0 9.0 0.0 5.0 5.0 5.0 
+
+12:59:18.682 [main] INFO  LabThreads - matrix MT:
+1.0 2.0 3.0 4.0 5.0 8.0 9.0 
+1.0 2.0 6.0 4.0 5.0 8.0 6.0 
+9.0 2.0 3.0 4.0 5.0 6.0 5.0 
+1.0 3.0 3.0 4.0 5.0 6.0 7.0 
+1.0 4.0 3.0 9.0 5.0 9.0 0.0 
+1.0 2.0 3.0 4.0 5.0 8.0 9.0 
+1.0 2.0 3.0 4.0 5.0 8.0 9.0 
+1.0 2.0 3.0 4.0 5.0 8.0 9.0 
+1.0 2.0 3.0 4.0 5.0 8.0 9.0 
+1.0 2.0 3.0 4.0 5.0 8.0 9.0 
+
+12:59:18.683 [main] INFO  LabThreads - MZMT matrix:
+ 74.0 114.0 156.0 225.0 250.0 391.0 379.0 
+101.0 120.0 165.0 237.0 265.0 409.0 394.0 
+76.0 118.0 162.0 233.0 260.0 407.0 397.0 
+65.0 96.0 132.0 189.0 205.0 319.0 295.0 
+70.0 111.0 150.0 209.0 230.0 349.0 327.0 
+
+12:59:18.684 [main] DEBUG operation.MatricesMultiplier - Multiplying matrixes: 5x7 and 7x7
+12:59:18.684 [Thread-5] DEBUG operation.MatricesMultiplier - Multiplying row: 0
+12:59:18.685 [main] DEBUG operation.MatricesMultiplier - Multiplying matrixes: 5x7 and 7x7
+12:59:18.685 [Thread-6] DEBUG operation.MatricesMultiplier - Multiplying row: 1
+12:59:18.685 [main] DEBUG operation.MatricesMultiplier - Multiplying matrixes: 5x7 and 7x7
+12:59:18.686 [main] DEBUG operation.MatricesMultiplier - Multiplying matrixes: 5x7 and 7x7
+12:59:18.686 [Thread-7] DEBUG operation.MatricesMultiplier - Multiplying row: 2
+12:59:18.686 [Thread-8] DEBUG operation.MatricesMultiplier - Multiplying row: 3
+12:59:18.687 [main] DEBUG operation.MatricesMultiplier - Multiplying matrixes: 5x7 and 7x7
+12:59:18.690 [Thread-9] DEBUG operation.MatricesMultiplier - Multiplying row: 4
+12:59:18.691 [main] INFO  LabThreads - matrix MC:
+1.0 2.0 3.0 4.0 5.0 8.0 9.0 
+1.0 2.0 6.0 4.0 5.0 8.0 6.0 
+9.0 2.0 3.0 4.0 5.0 6.0 5.0 
+1.0 3.0 3.0 4.0 5.0 6.0 7.0 
+1.0 4.0 3.0 9.0 5.0 9.0 0.0 
+
+12:59:18.692 [main] INFO  LabThreads - matrix ME:
+1.0 2.0 3.0 4.0 5.0 8.0 9.0 
+1.0 2.0 6.0 4.0 5.0 8.0 6.0 
+9.0 2.0 3.0 4.0 5.0 6.0 5.0 
+1.0 3.0 3.0 4.0 5.0 6.0 7.0 
+1.0 4.0 3.0 9.0 5.0 9.0 0.0 
+1.0 2.0 3.0 4.0 5.0 8.0 9.0 
+1.0 2.0 3.0 4.0 5.0 8.0 9.0 
+
+12:59:18.692 [main] INFO  LabThreads - MCME matrix:
+56.0 78.0 102.0 153.0 160.0 247.0 217.0 
+80.0 78.0 102.0 153.0 160.0 241.0 205.0 
+58.0 82.0 108.0 161.0 170.0 263.0 235.0 
+53.0 72.0 96.0 141.0 145.0 223.0 187.0 
+55.0 81.0 105.0 149.0 155.0 229.0 192.0 
+
+12:59:18.695 [Thread-10] DEBUG operation.FindSmallestNum - Looking for the smallest num in vector: 0
+12:59:18.695 [Thread-14] DEBUG operation.FindSmallestNum - Looking for the smallest num in vector: 4
+12:59:18.695 [Thread-11] DEBUG operation.FindSmallestNum - Looking for the smallest num in vector: 1
+12:59:18.695 [Thread-13] DEBUG operation.FindSmallestNum - Looking for the smallest num in vector: 3
+12:59:18.696 [Thread-12] DEBUG operation.FindSmallestNum - Looking for the smallest num in vector: 2
+12:59:18.696 [Thread-15] DEBUG operation.FindSmallestNum - Looking for the smallest num in vector: 5
+12:59:18.698 [Thread-16] DEBUG operation.FindSmallestNum - Looking for the smallest num in vector: 6
+12:59:18.698 [Thread-18] DEBUG operation.FindSmallestNum - Looking for the smallest num in vector: 8
+12:59:18.699 [Thread-19] DEBUG operation.FindSmallestNum - Looking for the smallest num in vector: 9
+12:59:18.698 [Thread-17] DEBUG operation.FindSmallestNum - Looking for the smallest num in vector: 7
+12:59:18.699 [main] INFO  LabThreads - vectorD[1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0]
+12:59:18.700 [main] INFO  LabThreads - the smallest num D: [1.0]
+12:59:18.702 [main] DEBUG operation.MatrixNumberMultiply - Multiplying matrix: 5x7 and number 1.00
+12:59:18.702 [main] DEBUG operation.MatrixNumberMultiply - Multiplying matrix: 5x7 and number 1.00
+12:59:18.703 [main] DEBUG operation.MatrixNumberMultiply - Multiplying matrix: 5x7 and number 1.00
+12:59:18.703 [main] DEBUG operation.MatrixNumberMultiply - Multiplying matrix: 5x7 and number 1.00
+12:59:18.704 [main] DEBUG operation.MatrixNumberMultiply - Multiplying matrix: 5x7 and number 1.00
+12:59:18.705 [main] INFO  LabThreads - Matrix MCME*min(D):
+56.0 78.0 102.0 153.0 160.0 247.0 217.0 
+80.0 78.0 102.0 153.0 160.0 241.0 205.0 
+58.0 82.0 108.0 161.0 170.0 263.0 235.0 
+53.0 72.0 96.0 141.0 145.0 223.0 187.0 
+55.0 81.0 105.0 149.0 155.0 229.0 192.0 
+
+12:59:18.706 [main] DEBUG operation.SumOfMatrices - Summing matrixes: 5x7 and 5x7
+12:59:18.707 [main] DEBUG operation.SumOfMatrices - Summing matrixes: 5x7 and 5x7
+12:59:18.707 [Thread-25] DEBUG operation.SumOfMatrices - Adding row of matrices: 0
+12:59:18.707 [Thread-26] DEBUG operation.SumOfMatrices - Adding row of matrices: 1
+12:59:18.707 [main] DEBUG operation.SumOfMatrices - Summing matrixes: 5x7 and 5x7
+12:59:18.709 [main] DEBUG operation.SumOfMatrices - Summing matrixes: 5x7 and 5x7
+12:59:18.709 [Thread-27] DEBUG operation.SumOfMatrices - Adding row of matrices: 2
+12:59:18.709 [Thread-28] DEBUG operation.SumOfMatrices - Adding row of matrices: 3
+12:59:18.709 [main] DEBUG operation.SumOfMatrices - Summing matrixes: 5x7 and 5x7
+12:59:18.709 [Thread-29] DEBUG operation.SumOfMatrices - Adding row of matrices: 4
+12:59:18.710 [main] INFO  LabThreads - Matrix MA:
+130.0 192.0 258.0 378.0 410.0 
+181.0 198.0 267.0 390.0 425.0 
+134.0 200.0 270.0 394.0 430.0 
+118.0 168.0 228.0 330.0 350.0 
+125.0 192.0 255.0 358.0 385.0 
+
+12:59:18.718 [main] INFO  LabThreads - [ThreadParallelExecutor] TIME of calc Matrix MA (ms): 50
+12:59:18.720 [main] DEBUG operation.VectorMatrixMultiply - Multiplying matrix: 5x7 and vector 5
+12:59:18.720 [main] DEBUG operation.VectorMatrixMultiply - Multiplying matrix: 5x7 and vector 5
+12:59:18.721 [main] DEBUG operation.VectorMatrixMultiply - Multiplying matrix: 5x7 and vector 5
+12:59:18.721 [Thread-31] DEBUG operation.VectorMatrixMultiply - Multiplying row: 1
+12:59:18.721 [Thread-30] DEBUG operation.VectorMatrixMultiply - Multiplying row: 0
+12:59:18.721 [main] DEBUG operation.VectorMatrixMultiply - Multiplying matrix: 5x7 and vector 5
+12:59:18.721 [Thread-32] DEBUG operation.VectorMatrixMultiply - Multiplying row: 2
+12:59:18.721 [main] DEBUG operation.VectorMatrixMultiply - Multiplying matrix: 5x7 and vector 5
+12:59:18.721 [Thread-33] DEBUG operation.VectorMatrixMultiply - Multiplying row: 3
+12:59:18.722 [main] DEBUG operation.VectorMatrixMultiply - Multiplying matrix: 5x7 and vector 5
+12:59:18.722 [Thread-34] DEBUG operation.VectorMatrixMultiply - Multiplying row: 4
+12:59:18.722 [main] DEBUG operation.VectorMatrixMultiply - Multiplying matrix: 5x7 and vector 5
+12:59:18.722 [Thread-35] DEBUG operation.VectorMatrixMultiply - Multiplying row: 5
+12:59:18.722 [Thread-36] DEBUG operation.VectorMatrixMultiply - Multiplying row: 6
+12:59:18.722 [main] INFO  LabThreads - VECTOR BMC:
+[39.0, 44.0, 51.0, 85.0, 75.0, 111.0, 64.0]
+12:59:18.723 [main] DEBUG operation.VectorMatrixMultiply - Multiplying matrix: 10x7 and vector 10
+12:59:18.729 [main] DEBUG operation.VectorMatrixMultiply - Multiplying matrix: 10x7 and vector 10
+12:59:18.729 [Thread-37] DEBUG operation.VectorMatrixMultiply - Multiplying row: 0
+12:59:18.729 [Thread-38] DEBUG operation.VectorMatrixMultiply - Multiplying row: 1
+12:59:18.729 [main] DEBUG operation.VectorMatrixMultiply - Multiplying matrix: 10x7 and vector 10
+12:59:18.729 [Thread-39] DEBUG operation.VectorMatrixMultiply - Multiplying row: 2
+12:59:18.730 [main] DEBUG operation.VectorMatrixMultiply - Multiplying matrix: 10x7 and vector 10
+12:59:18.730 [main] DEBUG operation.VectorMatrixMultiply - Multiplying matrix: 10x7 and vector 10
+12:59:18.730 [Thread-40] DEBUG operation.VectorMatrixMultiply - Multiplying row: 3
+12:59:18.730 [Thread-41] DEBUG operation.VectorMatrixMultiply - Multiplying row: 4
+12:59:18.730 [main] DEBUG operation.VectorMatrixMultiply - Multiplying matrix: 10x7 and vector 10
+12:59:18.732 [Thread-42] DEBUG operation.VectorMatrixMultiply - Multiplying row: 5
+12:59:18.732 [main] DEBUG operation.VectorMatrixMultiply - Multiplying matrix: 10x7 and vector 10
+12:59:18.732 [Thread-43] DEBUG operation.VectorMatrixMultiply - Multiplying row: 6
+12:59:18.733 [main] INFO  LabThreads - VECTOR DMT:
+[79.0, 124.0, 171.0, 245.0, 275.0, 431.0, 424.0]
+12:59:18.734 [Thread-44] DEBUG operation.SumOfVectors - Adding every num: 0
+12:59:18.734 [Thread-45] DEBUG operation.SumOfVectors - Adding every num: 1
+12:59:18.737 [Thread-46] DEBUG operation.SumOfVectors - Adding every num: 2
+12:59:18.738 [Thread-47] DEBUG operation.SumOfVectors - Adding every num: 3
+12:59:18.738 [Thread-48] DEBUG operation.SumOfVectors - Adding every num: 4
+12:59:18.739 [Thread-49] DEBUG operation.SumOfVectors - Adding every num: 5
+12:59:18.739 [Thread-50] DEBUG operation.SumOfVectors - Adding every num: 6
+12:59:18.739 [main] INFO  LabThreads - VECTOR A:
+[118.0, 168.0, 222.0, 330.0, 350.0, 542.0, 488.0]
+12:59:18.740 [main] INFO  LabThreads - [ThreadParallelExecutor] TIME of calc Vector A (ms): 20
