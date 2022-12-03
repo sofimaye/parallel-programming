@@ -15,12 +15,12 @@ public class VectorMatrixMultiply implements Runnable {
         this.vector = vector;
         this.matrix = matrix;
         this.row = row;
-        log.debug(String.format("Multiplying matrix: %dx%d and vector %d", matrix.length, matrix[0].length, vector.length));
+//        log.debug(String.format("Multiplying matrix: %dx%d and vector %d", matrix.length, matrix[0].length, vector.length));
     }
 
     @Override
     public void run() {
-        log.debug("Multiplying row: " + row);
+//        log.debug("Multiplying row: " + row);
             var sum = 0;
             for (int j = 0; j < vector.length; j++) {
                 sum += vector[j] * matrix[j][row];

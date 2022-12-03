@@ -16,14 +16,14 @@ public class MatricesMultiplier implements Runnable {
         this.matrix1 = matrix1;
         this.matrix2 = matrix2;
         this.row = row;
-        log.debug(String.format("Multiplying matrixes: %dx%d and %dx%d", matrix1.length, matrix1[0].length, matrix2.length, matrix2[0].length));
+//        log.debug(String.format("Multiplying matrixes: %dx%d and %dx%d", matrix1.length, matrix1[0].length, matrix2.length, matrix2[0].length));
 
     }
 
     @Override
     public void run() {
         // працює також якщо порядки різні
-        log.debug("Multiplying row: " + row);
+//        log.debug("Multiplying row: " + row);
         for (int i = 0; i < matrix2[0].length; i++) {
             result[row][i] = 0;
             for (int j = 0; j < matrix1[row].length; j++) {

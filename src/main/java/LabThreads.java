@@ -13,8 +13,8 @@ public class LabThreads {
 
     public static void main(String[] args) {
 //        execute(new SequentialExecutor());
-        execute(new ThreadParallelExecutor(20));
-//        execute(new FixedThreadPoolExecutor(8));
+//        execute(new ThreadParallelExecutor(20));
+        execute(new FixedThreadPoolExecutor(8));
     }
 
 

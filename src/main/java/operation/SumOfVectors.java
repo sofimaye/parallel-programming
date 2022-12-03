@@ -19,7 +19,7 @@ public class SumOfVectors implements Runnable {
 
     @Override
     public void run() {
-        log.debug("Adding every num: " + row);
+//        log.debug("Adding every num: " + row);
         vector[row] = vector1[row] + vector2[row];
     }
 }

@@ -17,7 +17,7 @@ public class FindSmallestNum implements Runnable {
 
     @Override
     public void run() {
-        log.debug("Looking for the smallest num in vector: " + row);
+//        log.debug("Looking for the smallest num in vector: " + row);
         number[0] = vector[0];
         if (number[0] > vector[row]) {
             number[0] = vector[row];

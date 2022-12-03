@@ -49,30 +49,14 @@ public class RandomData {
     //множення мариць можливе лише
     //тоді коли число стовпців першої матриці = кількості рядків другої
 
-//    static double[][] matrixMC = matrix(5, 7);
-//    static double[][] matrixME = matrix(7, 7);
+    static double[][] matrixMC = matrix(500, 700);
+    static double[][] matrixME = matrix(700, 700);
 
-//    static double[][] matrixMT = matrix(10, 7);
-//    static double[][] matrixMZ = matrix(5, 10);
+    static double[][] matrixMT = matrix(100, 700);
+    static double[][] matrixMZ = matrix(500, 100);
 
-//    static double[] vectorB = vector(5);
-//    static double[] vectorD = vector(10);
-
-    static double[] vectorB = {1,2,3,4,5};
-    static double[] vectorD = {1,2,3,4,5,6,7,8,9,10};
-
-    static double[][] matrixMC = {{1,2,3,4,5,8,9}, {1,2,6,4,5,8,6}, {9,2,3,4,5,6,5},
-            {1,3,3,4,5,6,7}, {1,4,3,9,5,9,0}};
-    static double[][] matrixMT = {{1,2,3,4,5,8,9}, {1,2,6,4,5,8,6}, {9,2,3,4,5,6,5},
-            {1,3,3,4,5,6,7}, {1,4,3,9,5,9,0},{1,2,3,4,5,8,9},{1,2,3,4,5,8,9},
-            {1,2,3,4,5,8,9},{1,2,3,4,5,8,9},{1,2,3,4,5,8,9}};
-    static double[][] matrixME = {{1,2,3,4,5,8,9}, {1,2,6,4,5,8,6}, {9,2,3,4,5,6,5},
-            {1,3,3,4,5,6,7}, {1,4,3,9,5,9,0},{1,2,3,4,5,8,9},{1,2,3,4,5,8,9}};
-    static double[][] matrixMZ = {{1,2,3,4,5,8,9,9,9,0}, {1,2,6,4,5,8,6,6,7,8}, {9,2,3,4,5,6,5,6,6,6},
-            {1,3,3,4,5,6,7,4,4,4}, {1,4,3,9,5,9,0,5,5,5}};
-
-
-
+    static double[] vectorB = vector(500);
+    static double[] vectorD = vector(100);
 
 
 

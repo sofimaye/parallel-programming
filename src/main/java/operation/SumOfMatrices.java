@@ -16,12 +16,12 @@ public class SumOfMatrices implements Runnable {
         this.matrix1 = matrix1;
         this.matrix2 = matrix2;
         this.row = row;
-        log.debug(String.format("Summing matrixes: %dx%d and %dx%d", matrix1.length, matrix1[0].length, matrix2.length, matrix2[0].length));
+//        log.debug(String.format("Summing matrixes: %dx%d and %dx%d", matrix1.length, matrix1[0].length, matrix2.length, matrix2[0].length));
     }
 
     @Override
     public void run() {
-        log.debug("Adding row of matrices: " + row);
+//        log.debug("Adding row of matrices: " + row);
         for (int j = 0; j < result[row].length; j++) {
             result[row][j] = matrix1[row][j] + matrix2[row][j];
         }

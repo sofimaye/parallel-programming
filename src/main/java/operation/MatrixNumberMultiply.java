@@ -15,7 +15,7 @@ public class MatrixNumberMultiply implements Runnable {
         this.number = number;
         this.matrix = matrix;
         this.row = row;
-        log.debug(String.format("Multiplying matrix: %dx%d and number %.2f", matrix.length, matrix[0].length, number));
+//        log.debug(String.format("Multiplying matrix: %dx%d and number %.2f", matrix.length, matrix[0].length, number));
     }
 
     @Override
