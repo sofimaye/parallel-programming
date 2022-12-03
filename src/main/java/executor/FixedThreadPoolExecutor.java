@@ -4,6 +4,9 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+// передаю в парамерах кількіть потоків яку ми хочемо створити
+// вони працюють паралельно і якщо якийсь із них закінчує роботу
+// йому надається наступне завдання
 public class FixedThreadPoolExecutor implements ParallelExecutor {
     private final int parallelism;
 

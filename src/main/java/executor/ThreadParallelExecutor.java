@@ -2,6 +2,10 @@ package executor;
 import java.util.ArrayList;
 import java.util.List;
 
+
+//для кожного завдання створюється новий потік
+//дуже затратно
+
 public class ThreadParallelExecutor implements ParallelExecutor {
     private final int parallelism;
 
@@ -21,6 +25,7 @@ public class ThreadParallelExecutor implements ParallelExecutor {
                 waitForThreads(threads);
             }
         }
+        waitForThreads(threads);
     }
 
     private void waitForThreads(List<Thread> threads) {

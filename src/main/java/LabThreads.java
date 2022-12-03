@@ -12,9 +12,9 @@ public class LabThreads {
     private final static Logger log = LoggerFactory.getLogger(LabThreads.class);
 
     public static void main(String[] args) {
-        execute(new SequentialExecutor());
+//        execute(new SequentialExecutor());
         execute(new ThreadParallelExecutor(20));
-        execute(new FixedThreadPoolExecutor(8));
+//        execute(new FixedThreadPoolExecutor(8));
     }
 
 
@@ -32,10 +32,10 @@ public class LabThreads {
         long time = System.currentTimeMillis();
         var minD = new double[1];
         //matrix length should be equal to matrix1.length
-        var matrixMZMT = new double[matrixMZ.length][matrixMZ.length];
-        var matrixMCME = new double[matrixMC.length][matrixMC.length];
-        var matrixMCMED = new double[matrixMCME.length][matrixMCME.length];
-        var matrixMA = new double[matrixMCMED.length][matrixMCMED.length];
+        var matrixMZMT = new double[matrixMZ.length][matrixMT[0].length];
+        var matrixMCME = new double[matrixMC.length][matrixME[0].length];
+        var matrixMCMED = new double[matrixMC.length][matrixME[0].length];
+        var matrixMA = new double[matrixMCME.length][matrixMZMT.length];
 
         //MATRIX MA CALCULATIONS
         //matrixMZMT
@@ -44,11 +44,30 @@ public class LabThreads {
                 row -> new MatricesMultiplier(matrixMZMT, matrixMZ, matrixMT, row)
         );
 
+        if (matrixMZMT.length >= 30) {
+            log.info("The matrix MZMT length: " + matrixMZMT.length);
+        } else {
+            log.info("matrix MZ:\n" + RandomData.matrixToString(matrixMZ));
+            log.info("matrix MT:\n" + RandomData.matrixToString(matrixMT));
+            log.info("MZMT matrix:\n " + RandomData.matrixToString(matrixMZMT));
+        }
+
+
         //matrixMCME
         parallelExecutor.runInParallel(
                 matrixMCME.length,
                 row -> new MatricesMultiplier(matrixMCME, matrixMC, matrixME, row)
         );
+
+        if (matrixMCME.length >= 30) {
+            log.info("The matrix MCME length: " + matrixMZMT.length);
+        } else {
+            log.info("matrix MC:\n" + RandomData.matrixToString(matrixMC));
+            log.info("matrix ME:\n" + RandomData.matrixToString(matrixME));
+            log.info("MCME matrix:\n" + RandomData.matrixToString(matrixMCME));
+        }
+
+
 
         // minD
         parallelExecutor.runInParallel(
@@ -56,11 +75,25 @@ public class LabThreads {
                 row -> new FindSmallestNum(minD, vectorD, row)
         );
 
+        if(vectorD.length >= 30){
+            log.info("Vector D length: " + vectorD.length);
+        }else{
+            log.info("vectorD" + Arrays.toString(vectorD));
+            log.info("the smallest num D: " + Arrays.toString(minD));
+        }
+
+
+
         //MCME*min(D)
         parallelExecutor.runInParallel(
                 matrixMCMED.length,
-                row -> new MatrixNumberMultiply(matrixMCMED, minD, matrixMCME, row)
+                row -> new MatrixNumberMultiply(matrixMCMED, minD[0], matrixMCME, row)
         );
+        if(matrixMCMED.length >=30){
+            log.info("Matrix MCME*min(D): " + matrixMCMED.length);
+        }else{
+            log.info("Matrix MCME*min(D):\n" + RandomData.matrixToString(matrixMCMED));
+        }
 
         //MCME*min(D) + MZMT
         parallelExecutor.runInParallel(
@@ -74,38 +107,11 @@ public class LabThreads {
             log.info("Matrix MA:\n" + RandomData.matrixToString(matrixMA));
         }
 
-        if(matrixMCMED.length >=30){
-            log.info("Matrix MCME*min(D): " + matrixMCMED.length);
-        }else{
-            log.info("Matrix MCME*min(D):\n" + RandomData.matrixToString(matrixMCMED));
-        }
-
-        if(vectorD.length >= 30){
-            log.info("Vector D length: " + vectorD.length);
-        }else{
-           log.info("vectorD" + Arrays.toString(vectorD));
-           log.info("the smallest num D: " + Arrays.toString(minD));
-        }
-
-        if (matrixMZMT.length >= 30) {
-            log.info("The matrix MZMT length: " + matrixMZMT.length);
-        } else {
-            log.info("matrix MZ:\n" + RandomData.matrixToString(matrixMZ));
-            log.info("matrix MT:\n" + RandomData.matrixToString(matrixMT));
-            log.info("MZMT matrix:\n " + RandomData.matrixToString(matrixMZMT));
-        }
-
-        if (matrixMCME.length >= 30) {
-            log.info("The matrix MCME length: " + matrixMZMT.length);
-        } else {
-            log.info("matrix MC:\n" + RandomData.matrixToString(matrixMC));
-            log.info("matrix ME:\n" + RandomData.matrixToString(matrixME));
-            log.info("MCME matrix:\n" + RandomData.matrixToString(matrixMCME));
-        }
 
         log.info("[" + parallelExecutor.getClass().getSimpleName() + "]" + " TIME of calc Matrix MA (ms): " + (System.currentTimeMillis() - time));
 
         long time2 = System.currentTimeMillis();
+
         //VECTOR A CALCULATIONS
         //A = B*MC+D*MT
         var BMC = new double[matrixMC[0].length];

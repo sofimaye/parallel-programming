@@ -49,24 +49,32 @@ public class RandomData {
     //множення мариць можливе лише
     //тоді коли число стовпців першої матриці = кількості рядків другої
 
-    //static double[][] matrixMC = matrix(4, 3);
-    //static double[][] matrixME = matrix(3, 4);
+//    static double[][] matrixMC = matrix(5, 7);
+//    static double[][] matrixME = matrix(7, 7);
 
-    //static double[][] matrixMT = matrix(3, 4);
-    //static double[][] matrixMZ = matrix(4, 3);
+//    static double[][] matrixMT = matrix(10, 7);
+//    static double[][] matrixMZ = matrix(5, 10);
 
-    static double[][] matrixMC = {{1, 8, 11, 8}, {9, 11, 2, 9}, {1, 5, 7, 8}, {2, 9, 1, 8}};
-    static double[][] matrixME = {{1, 0, 1, 6}, {4, 2, 1, 8}, {1, 8, 5, 8}, {8, 9, 1, 6}};
+//    static double[] vectorB = vector(5);
+//    static double[] vectorD = vector(10);
 
-    static double[][] matrixMZ = {{1, 8, 9, 8}, {9, 11, 0, 8}, {3, 5, 7, 5}, {8, 5, 1, 8}};
-    static double[][] matrixMT = {{1, 2, 3, 9}, {4, 9, 12, 5}, {1, 3, 5, 8}, {8, 3, 1, 8}};
+    static double[] vectorB = {1,2,3,4,5};
+    static double[] vectorD = {1,2,3,4,5,6,7,8,9,10};
+
+    static double[][] matrixMC = {{1,2,3,4,5,8,9}, {1,2,6,4,5,8,6}, {9,2,3,4,5,6,5},
+            {1,3,3,4,5,6,7}, {1,4,3,9,5,9,0}};
+    static double[][] matrixMT = {{1,2,3,4,5,8,9}, {1,2,6,4,5,8,6}, {9,2,3,4,5,6,5},
+            {1,3,3,4,5,6,7}, {1,4,3,9,5,9,0},{1,2,3,4,5,8,9},{1,2,3,4,5,8,9},
+            {1,2,3,4,5,8,9},{1,2,3,4,5,8,9},{1,2,3,4,5,8,9}};
+    static double[][] matrixME = {{1,2,3,4,5,8,9}, {1,2,6,4,5,8,6}, {9,2,3,4,5,6,5},
+            {1,3,3,4,5,6,7}, {1,4,3,9,5,9,0},{1,2,3,4,5,8,9},{1,2,3,4,5,8,9}};
+    static double[][] matrixMZ = {{1,2,3,4,5,8,9,9,9,0}, {1,2,6,4,5,8,6,6,7,8}, {9,2,3,4,5,6,5,6,6,6},
+            {1,3,3,4,5,6,7,4,4,4}, {1,4,3,9,5,9,0,5,5,5}};
 
 
-//    static double[] vectorB = vector(3);
-//    static double[] vectorD = vector(3);
 
-    static double[] vectorB = {1,2,3,8};
-    static double[] vectorD = {1,2,3,2}; // виходить трьохзначний вектор
+
+
 
     //generate random matrix
     public static double[][] matrix(int row, int col) {

@@ -21,13 +21,11 @@ public class VectorMatrixMultiply implements Runnable {
     @Override
     public void run() {
         log.debug("Multiplying row: " + row);
-//        for (int i = 0; i < matrix[0].length; i++) {
             var sum = 0;
             for (int j = 0; j < vector.length; j++) {
                 sum += vector[j] * matrix[j][row];
             }
             result[row] = sum;
-//        }
     }
 
 }
